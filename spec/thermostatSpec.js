@@ -67,6 +67,7 @@ describe('Thermostat', function() {
 
   describe('reset',function(){
     it('should reset the thermostat', function(){
+      thermostat.down()
       thermostat.reset()
       expect(thermostat.seeTemp()).toEqual(20)
     })

@@ -1,3 +1,5 @@
+'use strict';
+
 function Thermostat(default_temp = 20) {
   this._temp = default_temp
   this.MINIMUM_TEMP = 10
@@ -11,6 +13,8 @@ function Thermostat(default_temp = 20) {
 Thermostat.prototype.seeTemp = function() {
   return this._temp
 }
+
+
 
 Thermostat.prototype.up = function() {
   if (this._powerMode == "on" && this._temp == this.MAXIMUM_TEMP_ON) {return null}
